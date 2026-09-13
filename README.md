@@ -68,7 +68,7 @@ to:
 
 ## How Does It Work?
 
-text
+```text       
           INVENTORY DATA
                 │
                 ▼
@@ -246,35 +246,52 @@ Resolution information
 
 ---
 
-Architecture 
+# 🏗️ System Architecture
 
-┌────────────────────────────────────────────┐
-│                 FRONTEND                   │
-│          React + TypeScript + Vite         │
-└─────────────────────┬──────────────────────┘
-                      │
-                      │ REST API
-                      ▼
-┌────────────────────────────────────────────┐
-│                  BACKEND                   │
-│       Node.js + Express + TypeScript       │
-│                                            │
-│  Forecasting │ Risk │ Recommendations     │
-│  Transfers   │ Alerts │ Replenishment     │
-└─────────────────────┬──────────────────────┘
-                      │
-                      │ Drizzle ORM
-                      ▼
-┌────────────────────────────────────────────┐
-│                POSTGRESQL                  │
-│                                            │
-│ Inventory │ Medicines │ Facilities         │
-│ Demand History │ Replenishments            │
-│ Alert History │ Transfer Data              │
-└────────────────────────────────────────────┘
+DAWAI-SETU follows a three-layer architecture connecting the user interface, intelligence layer and database.
+
+```text
+┌─────────────────────────────────────┐
+│              FRONTEND               │
+│                                     │
+│  Dashboard • Inventory • Map        │
+│  Forecast • Risk • Recommendations  │
+│  Transfers • Alerts                 │
+│                                     │
+│       React + TypeScript + Vite     │
+└──────────────────┬──────────────────┘
+                   │
+                   │ REST APIs
+                   ▼
+┌─────────────────────────────────────┐
+│               BACKEND               │
+│                                     │
+│  Inventory Management               │
+│  Demand Forecasting                 │
+│  Risk Analysis                      │
+│  Regional Shortage Analysis         │
+│  Replenishment & Lead Time          │
+│  Recommendation Engine              │
+│  Transfer & Alert Management        │
+│                                     │
+│      Node.js + Express + TypeScript │
+└──────────────────┬──────────────────┘
+                   │
+                   │ Drizzle ORM
+                   ▼
+┌─────────────────────────────────────┐
+│              DATABASE               │
+│                                     │
+│  Medicines • Facilities             │
+│  Inventory • Demand History         │
+│  Replenishments • Alerts            │
+│  Transfer Records                   │
+│                                     │
+│            PostgreSQL               │
+└─────────────────────────────────────┘
 
 ---
-
+ 
 🛠️ Tech Stack
 
 Frontend
