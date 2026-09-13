@@ -68,7 +68,7 @@ to:
 
 ## How Does It Work?
 
-```text       
+text       
           INVENTORY DATA
                 │
                 ▼
@@ -105,7 +105,8 @@ to:
                 ▼
        RISK RE-EVALUATION
 
----       
+---
+
 
 Impact
 
